@@ -1,5 +1,6 @@
 package spcgroup.soirapheesp.mytraffic;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -48,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
                 //sound effect
                 MediaPlayer buttonMediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.cat);
                 buttonMediaPlayer.start();
+
+                //intent to WebView
+                Intent objIntent = new Intent(Intent.ACTION_VIEW);
+                objIntent.setData(Uri.parse("https://youtu.be/0KSOMA3QBU0"));
+                startActivity(objIntent);
+
             }
         });
     }
